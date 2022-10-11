@@ -172,3 +172,33 @@ if (path.match(/(\/add-product\/?.*)/gi)) {
       });
   });
 }
+
+// Login Form
+
+if (path.match(/(\/login\/?.*)/gi)) {
+  const authFrom = document.querySelector(".auth-form.login");
+  const revealPassword = document.querySelector(".reveal-password");
+
+  authFrom.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+
+  revealPassword.addEventListener("click", (e) => {
+    e.preventDefault();
+    const icon = revealPassword.firstElementChild;
+
+    if (authFrom.password.type === "password") {
+      authFrom.password.type = "text";
+    } else {
+      authFrom.password.type = "password";
+    }
+
+    if (icon.classList.contains("gg-eye-alt")) {
+      icon.classList.remove("gg-eye-alt");
+      icon.classList.add("gg-eye");
+    } else {
+      icon.classList.remove("gg-eye");
+      icon.classList.add("gg-eye-alt");
+    }
+  });
+}

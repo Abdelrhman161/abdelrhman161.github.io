@@ -157,6 +157,11 @@ header {
   color: var(--white);
 }
 
+.mobile-nav a.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
 .backdrop {
   position: fixed;
   width: 100vw;
@@ -254,6 +259,7 @@ header {
   align-items: center;
   gap: 10px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .pagination a {
@@ -644,6 +650,173 @@ header {
 
 .order__subtotal span {
   font-weight: 500;
+}
+
+/* Authentication */
+
+.gg-eye {
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 24px;
+  height: 18px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.gg-eye::after,
+.gg-eye::before {
+  content: "";
+  display: block;
+  border-radius: 100px;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.gg-eye::after {
+  top: 2px;
+  box-shadow: inset 0 -8px 0 2px, inset 0 0 0 2px;
+  width: 24px;
+  height: 24px;
+}
+
+.gg-eye::before {
+  width: 8px;
+  height: 8px;
+  border: 2px solid;
+  bottom: 4px;
+  left: 8px;
+}
+
+.gg-eye-alt {
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 24px;
+  height: 18px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.gg-eye-alt::after,
+.gg-eye-alt::before {
+  content: "";
+  display: block;
+  border-radius: 100px;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.gg-eye-alt::after {
+  top: 2px;
+  box-shadow: inset 0 -8px 0 2px, inset 0 0 0 2px;
+  width: 24px;
+  height: 24px;
+}
+
+.gg-eye-alt::before {
+  width: 8px;
+  height: 8px;
+  border: 2px solid transparent;
+  box-shadow: inset 0 0 0 6px, 0 0 0 4px, 6px 0 0 0, -6px 0 0 0;
+  bottom: 4px;
+  left: 8px;
+}
+
+.auth-form {
+  display: block;
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 30px 20px;
+  border-radius: 4px;
+}
+
+.auth {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.auth .form-group {
+  position: relative;
+}
+
+.auth .form-group input:focus + label {
+  top: -11px;
+  transform: translateY(-11px);
+  transform: scale(0.9);
+}
+
+.auth .form-group input:not(:valid) + label {
+  top: -11px;
+  transform: translateY(-11px);
+  transform: scale(0.9);
+}
+
+.auth .form-group label {
+  padding: 3px 3px 3px 0;
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 400;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%);
+  user-select: none;
+  cursor: text;
+  background-color: var(--white);
+  transition: transform 300ms ease-out, top 300ms ease-out;
+}
+
+.auth .form-group .reveal-password {
+  position: absolute;
+  right: 2%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.auth input[type="submit"] {
+  padding: 12px;
+  width: 100%;
+  background-color: var(--purple);
+  color: var(--white);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.auth a {
+  display: inline-block;
+  color: var(--purple);
+  font-size: 15px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth a:hover {
+  text-decoration: underline;
+}
+
+.auth p:last-of-type {
+  color: var(--secondary);
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.reset-password {
+  text-align: center;
 }
 
 /* Media Queries */

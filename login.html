@@ -68,7 +68,7 @@
             </svg>
             <span>Logout</span>
           </a>
-          <a href="/login.html" class="nav__items__button">
+          <a href="/login.html" class="nav__items__button active">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -116,37 +116,33 @@
         <li><a href="/orders.html">Orders</a></li>
         <li><a href="/add-product.html">Add Product</a></li>
         <li><a href="/admin-products.html">Admin Products</a></li>
-        <li><a href="/login.html">Login</a></li>
+        <li><a href="/login.html" class="active">Login</a></li>
         <li><a href="##">Logout</a></li>
       </ul>
     </div>
 
-    <!-- Product Details -->
+    <!-- Login From -->
 
-    <main class="product-details">
-      <div class="product-details__img">
-        <img src="./images/product-03.jpg" alt="" />
-      </div>
-      <div class="product-details__info">
-        <h1>ONNE Nourish Set</h1>
-        <p>Revive your skin with these aquatic-inspired products.</p>
-        <div class="quantity">
-          <label for="quantity">Quantity </label>
-          <button class="decrement">-</button>
+    <main class="auth">
+      <form class="auth-form login" action="/login" method="post">
+        <div class="form-group">
           <input
-            type="number"
-            name=""
-            class="quantity"
-            step="1"
-            value="1"
-            min="1"
+            type="email"
+            name="email"
+            id="email"
+            pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
           />
-          <button class="increment">+</button>
+          <label for="email">Email address</label>
         </div>
-        <button class="add-to-cart-btn add-to-cart-btn--secondary">
-          Add to cart
-        </button>
-      </div>
+        <div class="form-group">
+          <input type="password" name="password" id="password" pattern="/.*/" />
+          <label for="password">Password</label>
+          <button class="reveal-password"><i class="gg-eye"></i></button>
+        </div>
+        <a href="/reset-password.html">Forgot Password?</a>
+        <input type="submit" value="Login" />
+        <p>Don't have an account? <a href="/signup.html">Sing up</a></p>
+      </form>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/notyf@3.10.0/notyf.min.js"></script>
