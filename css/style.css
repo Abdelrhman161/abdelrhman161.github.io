@@ -908,7 +908,7 @@ header {
   transform: scale(0.9);
 }
 
-.auth .form-group input:valid + label {
+.auth .form-group input:not(:placeholder-shown) + label {
   top: -11px;
   -webkit-transform: translateY(-11px);
   -ms-transform: translateY(-11px);
